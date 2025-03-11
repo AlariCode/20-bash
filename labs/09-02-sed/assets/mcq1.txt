@@ -1,0 +1,4 @@
+sed -n '1p' lines.txt
+sed -n 'n;p' lines.txt
+sed -n 'p;n' lines.txt
+sed -n '$p' lines.txt

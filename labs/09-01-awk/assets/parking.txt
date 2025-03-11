@@ -1,0 +1,7 @@
+* a b c d e f g h
+1 X O O O O X O X
+2 X O X X O X X X
+3 O O O O O O O O
+4 X X X X O X X X
+5 X O O O O X O O
+6 O O O O O O O O

@@ -1,0 +1,4 @@
+None
+USB vendor ID not defined
+Vendor of Vesta is Lada
+Vendor of Camry is Toyota

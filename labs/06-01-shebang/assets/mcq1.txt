@@ -1,0 +1,4 @@
+/bin/dash
+/bin/zsh
+/bin/csh
+/bin/ksh

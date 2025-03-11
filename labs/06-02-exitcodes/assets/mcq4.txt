@@ -1,0 +1,4 @@
+Exit script after first error
+Nothing
+Verbose script output
+Ignore all errors in script

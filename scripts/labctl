@@ -1,0 +1,217 @@
+#!/bin/bash
+
+if [ -z ${1} ]
+then
+  echo "Please provide a functionality. One of builder-connect | get-creds | clone-repo | build-app | test-app | deploy-app | status"
+  exit 1
+fi
+
+if [ -z ${2} ]
+then
+  echo "Please input a task name in the form labctl <task name>"
+  echo "eg: labctl frontend get-creds"
+  exit 1
+fi
+
+function_name=$1
+task_name=$2
+
+
+# Optional environment variables
+# COUNT_DOWN - seconds for deploy-app before launch - Default 10
+# MAX_WAIT - seconds to wait messages in system checking sequence - Default 3
+# STATUS_DELAY - seconds to wait before setting status - Default 1
+# POST_LIFT_OFF_DELAY - Delay before setting a success state post lift off - Default 2
+# MUST_FAIL - "true" Launch fails
+# FAILURE_REASON - A reason for a faulure
+# SHOW_ANIMATION - Show deploy launching animation
+
+[[ -z "${MAX_WAIT}" ]] && max_wait=3 || status_delay=${MAX_WAIT}
+[[ -z "${STATUS_DELAY}" ]] && status_delay=1 || status_delay=${STATUS_DELAY}
+[[ -z "${COUNT_DOWN}" ]] && count_down_from=5 || count_down_from=${COUNT_DOWN}
+[[ -z "${POST_LIFT_OFF_DELAY}" ]] && post_lift_off_sequence_delay=2 || post_lift_off_sequence_delay=${POST_LIFT_OFF_DELAY}
+[[ -z "${SHOW_ANIMATION}" ]] && show_animation=true || show_animation=${SHOW_ANIMATION}
+
+failReasons=("wrong_keys" "no_server_resources" "server_failure" "dependency_error")
+
+print-color() {
+
+  RED='\033[0;31m'
+  GREEN='\033[0;32m'
+  NC='\033[0m' # No Color
+
+  case $1 in
+  red)
+    COLOR=$RED
+    ;;
+  green)
+    COLOR=$GREEN
+    ;;
+  esac
+
+  printf "${COLOR}$2${NC}"
+}
+
+check-if-task-exists (){
+  [ ! -d "$(pwd)/$task_name" ] && print-color red "\nErr! Task directory does not exist.\n" && exit 1
+}
+
+set-status (){
+    check-if-task-exists
+    sleep ${status_delay}
+    echo "$1" > "$(pwd)/$task_name/status"
+    print-color green "\nDone!\n"
+}
+
+get-status (){
+    check-if-task-exists
+    cat "$(pwd)/$task_name/status"
+}
+
+set-reason () {
+  local reason=$1
+  check-if-task-exists
+  echo "$reason" > "$(pwd)/$task_name/reason"
+}
+
+get-reason () {
+  check-if-task-exists
+  cat "$(pwd)/$task_name/reason"
+}
+
+builder () {
+  printf "\n----------------------------------------------------"
+  print-color green "\n|ROTORO.CORP builder: omega| PRJ: %s"$task_name
+  printf "\n----------------------------------------------------"
+  printf "\nThe server is ready to build the project."
+  set-status "connected"
+}
+
+vault () {
+  printf "\nGet keys from the vault.\n"
+  end=$(($((RANDOM % 5))+3))
+  for i in $(seq 1 $end)
+  do
+    print-color red '🔒 '
+    sleep 0.2
+  done
+  set-status "credentials"
+}
+
+repo () {
+  printf "\nCloning project repository.\n"
+  end=$(($((RANDOM % 5))+3))
+  for i in $(seq 1 $end)
+  do
+    print-color green '📂 '
+    sleep 0.2
+  done
+  set-status "cloned"
+}
+
+build () {
+  printf "\nStarting the build.\n"
+  sleep $((RANDOM % max_wait))
+  printf "\n✅  Linting the code.   OK!"
+  sleep $((RANDOM % max_wait))
+  printf "\n☑️  Check the dependencies.   OK!"
+  sleep $((RANDOM % max_wait))
+  printf "\n🧩  Create application.   OK!"
+  sleep $((RANDOM % max_wait))
+  printf "\n🛠️  Build the image.   OK!"
+  sleep $((RANDOM % max_wait))
+  printf "\n🚀  Tag and push.   OK!"
+  printf "\n----------------------"
+  printf "\n🏁  Build complete!\n"
+  set-status "builded"
+}
+
+test () {
+  printf "\nStarting the tests."
+  sleep 1
+  print-color green "\nTests 11/11"
+  set-status "tested"
+}
+
+deploy () {
+  printf "\nInitiating deployment sequence."
+  print-color green "\n   COPY RELEASE FILES"
+  for i in $(eval echo {$count_down_from..0})
+      do
+          print-color red "\n          $i"
+          sleep ${status_delay}
+      done
+  print-color green "\n    RUN THE RELEASE!\n"
+  set-status "launching"
+  if [ $show_animation = "true" ]
+  then
+      cat /usr/bin/deploy.vt | pv -qL 500
+  fi
+  deploy-sequence > /dev/null &
+}
+
+deploy-sequence () {
+  sleep ${post_lift_off_sequence_delay}
+  # If must fail environment variable is set fail the launch and set a random reason
+  if [ "${MUST_FAIL}" = true ]
+  then
+      set-status "failed"
+      # If failure reason environment variable is set, use that.
+      # If not set set a random reason
+      if [ -z ${FAILURE_REASON} ]
+      then
+          rand=$[$RANDOM % ${#failReasons[@]}]
+          fail_reason=${failReasons[$rand]}
+          echo "Setting reason ${fail_reason}"
+          set-reason ${fail_reason}
+      else
+          set-reason ${FAILURE_REASON}
+      fi
+  else
+      set-status "success"
+  fi
+}
+
+status () {
+  sleep ${status_delay}
+  get-status
+}
+
+debug () {
+  get-reason
+}
+
+case $function_name in
+  builder-connect)
+    builder
+    ;;
+  get-creds)
+    vault
+    ;;
+  clone-repo)
+    repo
+    ;;
+  build-app)
+    build
+    ;;
+  test-app)
+    test
+    ;;
+  deploy-app)
+    deploy
+    ;;
+  deploy-status)
+    status
+    ;;
+  release-debug)
+    debug
+    ;;
+  all)
+    builder
+    get-creds
+    clone-repo
+    build-app
+    test-app
+    deploy-app
+    status
+esac

@@ -1,0 +1,4 @@
+manager
+ci-runners
+object-store
+federation

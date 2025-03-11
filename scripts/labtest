@@ -1,0 +1,16 @@
+export COUNT_DOWN=0
+export POST_LIFT_OFF_DELAY=0
+export STATUS_DELAY=0
+export SHOW_ANIMATION=false
+
+PRJ_TESTING_PATH=/tmp/test-builds/
+
+if [ -z "$2" ]; then TASK="db-subsystem"; else TASK="$2"; fi;
+
+rm -rf ${PRJ_TESTING_PATH} 2> /dev/null
+mkdir -p ${PRJ_TESTING_PATH}/$TASK
+
+PWDD=$(pwd)
+cd ${PRJ_TESTING_PATH}
+
+bash ${PWDD}/$1 $2

@@ -1,0 +1,1 @@
+labctl deploy-app $1

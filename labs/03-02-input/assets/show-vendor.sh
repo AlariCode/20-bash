@@ -1,0 +1,1 @@
+echo "Vendor of Camry is Toyota"

@@ -1,0 +1,1 @@
+labctl deploy-status $1

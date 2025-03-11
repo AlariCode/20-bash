@@ -1,0 +1,4 @@
+"The word 'Hello' gets printed to the terminal 15 times.",
+"The word 'Hello' gets printed to the terminal 17 times.",
+"The word 'Hello' gets not printed to the terminal.",
+"The output of the command is blank."

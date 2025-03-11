@@ -1,0 +1,4 @@
+Prints nothing
+Prints numbers from 0 to a given number
+Prints {12..21}
+Prints numbers from 12 to 21

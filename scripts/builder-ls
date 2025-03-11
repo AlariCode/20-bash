@@ -1,0 +1,29 @@
+print-color() {
+
+  RED='\033[0;31m'
+  GREEN='\033[0;32m'
+  NC='\033[0m' # No Color
+
+  case $1 in
+    red)   COLOR=$RED ;;
+    green) COLOR=$GREEN ;;
+  esac
+
+  printf "${COLOR}$2${NC}"
+}
+
+build_tasks=$(ls */status 2> /dev/null | awk -F/ '{print $1}')
+printf "\n----------------------------------------------------"
+print-color green "\n|ROTORO.CORP builder: omega| PRJ: %s"$task_name
+printf "\n----------------------------------------------------"
+
+print-color white "  Name \t\t\t Status"
+print-color green "\n-------------------------------------------\n"
+
+for task_name in $build_tasks
+do
+  flight_task=$(cat $task_name/status)
+  printf "$task_name \t\t $flight_task\n"
+done
+
+print-color green "\n          Total Builds - $(echo $build_tasks | grep '[^ ]' | wc -w)\n"

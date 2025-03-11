@@ -1,0 +1,13 @@
+task_name=db-subsystem
+
+mkdir $task_name
+
+builder-connect $task_name
+
+builder-creds $task_name
+builder-repo $task_name
+builder-build $task_name
+builder-test $task_name
+builder-deploy  $task_name
+
+builder-status $task_name

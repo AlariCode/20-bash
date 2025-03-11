@@ -1,0 +1,1 @@
+curl -o /dev/null "http://1.1.1.1/emitter?t='{}'" -w "%{url_effective}\n" 2> /dev/null
