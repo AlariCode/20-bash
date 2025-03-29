@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 cat /home/moon/prepare-and-deploy | grep 'task_name=' && cat /home/moon/prepare-and-deploy | grep '\$task_name'
 

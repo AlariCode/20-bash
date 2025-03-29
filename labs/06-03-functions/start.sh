@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 sudo clean-working-dir
 
 sudo cp -R /labs/06-03-functions/assets/create-directories.sh /home/moon; sudo chown -R moon:moon /home/moon/create-directories.sh; sudo chmod +x /home/moon/create-directories.sh;

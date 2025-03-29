@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 sudo clean-working-dir
 
 echo {1..17} > /home/moon/lines_dump.txt

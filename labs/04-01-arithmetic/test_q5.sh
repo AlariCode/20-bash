@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 bash /home/moon/square.sh | grep area | grep 18
 

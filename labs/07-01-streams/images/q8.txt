@@ -1,0 +1,5 @@
+Задание 8 (/labs/07-01-streams/test_q8.sh)
+
+1. В размещении `/home/moon/` есть скрипт `vars.sh`, и в нём определена переменная `letters_var`.
+
+Создай переменные `letters_heredoc` и `letters_herestring` с таким же выводом при помощи методов heredoc и herestring

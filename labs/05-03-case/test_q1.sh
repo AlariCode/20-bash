@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 bash /home/moon/print-car-brand.sh | grep "Audi brand is from Germany"
 

@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 cat /home/moon/books-dev.csv | grep -i rowling | wc -l | grep 0
 

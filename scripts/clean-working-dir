@@ -1,4 +1,5 @@
 cd /home/moon
+
 GLOBIGNORE=.*
 rm -vr * 2> /dev/null
 unset GLOBIGNORE

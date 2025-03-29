@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 bash /home/moon/print-numbers.sh 10 | grep 10
 

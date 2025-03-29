@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 rm -rf /home/moon/texts; mkdir /home/moon/texts; cd /home/moon/texts; 
 touch kube-for-beginners.txt docker-for-beginners.txt terraform-for-beginners.txt ansible-for-beginners.txt linux-for-beginners.doc scripts-for-beginners-txt.htm; 

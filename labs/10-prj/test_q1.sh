@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 sudo /tmp/destroy.sh
 bash /home/moon/deploy-estate-application.sh

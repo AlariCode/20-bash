@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 echo "harry" | sh -c "/home/moon/hello_name.sh" | grep harry
 

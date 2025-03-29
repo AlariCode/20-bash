@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 expect /tmp/assets/calculator-test.sh  5 7 13 | grep 10
 

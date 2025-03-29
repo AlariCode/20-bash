@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 [ -f /home/moon/check_dir.sh ]
 

@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 bash /home/moon/vars.sh > /tmp/vars.output
 

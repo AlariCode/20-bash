@@ -1,0 +1,11 @@
+Задание 6 (/labs/08-01-arrays/test_q6.sh)
+
+1. В каталоге `/home/moon/script` имеется скрипт под названием `emails.sh`. Обнови этот скрипт, под следующие требования:
+
+Создай цикл for, который перебирает массив.
+Цикл for должен печатать ключ и значение для каждого элемента массива в следующем формате:
+
+Alena's email is: alena@rotoro.corp
+Diego's email is: papaya@rotoro.corp
+Iren's email is: iro4ka@gmail.com
+Vova's email is: volodya@rotoro.corp

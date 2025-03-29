@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 cat /home/moon/calculation.sh | awk -v RS='^$' 'END{exit !(index($0,"+") && index($0,"-") && index($0,"*") && index($0,"/"))} '
 

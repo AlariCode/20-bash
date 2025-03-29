@@ -1,0 +1,5 @@
+Задание 1 (/labs/05-01-for-loop/test_q1.sh)
+
+1. Разработай новый скрипт `/home/moon/multi-deploy.sh`, чтобы вызывать скрипт `prepare-and-deploy` для запуска 5 сборок для следующих проектов, используя цикл `for`:
+
+db-subsystem, backend, frontend, load-balancer, monitoring

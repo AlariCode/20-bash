@@ -1,0 +1,11 @@
+Задание 5 (/labs/07-01-streams/test_q5.sh)
+
+1. Создай исполняемый скрипт с названием `err-silenced.sh` в каталоге `/home/moon/`. Добавь в этот скрипт следующий код:
+
+echo "Hide a standard output"
+echo "Hide an error messages" >&2
+exit
+
+2. Теперь запусти это скрипт с полностью отключенными `Standard Output` и `Standard Error`, т.е. отправь все выходные потоки команд в `/dev/null`.
+
+3. Запиши эту команду в файл `devnull.txt`

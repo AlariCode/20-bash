@@ -1,0 +1,12 @@
+Задание 1 (/labs/02-01-first-script/test_q1.sh)
+
+1. Создай скрипт с названием `prepare-and-deploy` в размещении `/home/moon` и добавь команды, которые ниже:
+
+- mkdir db-subsystem
+- builder-connect db-subsystem
+- builder-creds db-subsystem
+- builder-repo db-subsystem
+- builder-build db-subsystem
+- builder-test db-subsystem
+- builder-deploy db-subsystem
+- builder-status db-subsystem

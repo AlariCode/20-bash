@@ -1,0 +1,13 @@
+Задание 7 (/labs/07-01-streams/test_q7.sh)
+
+Здесь мы работаем с файловой системой с удаленного сервера, используя строки Heredocs. Мы подключимся к нашему локальному хосту по ssh и попробуем выполнить команды, как будто бы это была удалённая система.
+
+1. Создай файл с командой подключения `sshpass -p 'selena' ssh -o StrictHostKeyChecking=no moon@localhost` и в ней при помощи heredoc выполни следующие команды:
+
+sudo mkdir /heredoc_test
+sudo chown -R moon:moon /heredoc_test
+echo Shell Scripts > /heredoc_test/heredoc.txt
+
+2. Запиши команду в файл `remote.txt`
+
+

@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 cat /home/moon/mcq4.txt | grep 'Exit script after first error'
 

@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 cat /home/moon/mcq2.txt | grep "The word 'Hello' gets printed to the terminal 17 times."
 

@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 sudo clean-working-dir
 sudo rm -rf /bin/sh; sudo ln -s /bin/dash /bin/sh; 
 

@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 sudo rm -rf /heredoc_test/
 bash /home/moon/remote.txt

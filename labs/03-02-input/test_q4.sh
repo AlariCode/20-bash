@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 cat /home/moon/show-vendor.sh | awk -v RS='^$' 'END{exit !(index($0,"$1") && index($0,"$2"))} '
 

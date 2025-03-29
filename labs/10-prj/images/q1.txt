@@ -1,0 +1,7 @@
+Развертывание проекта (/labs/10-prj/test_q1.sh)
+
+1. Разработай скрипт оболочки `/home/moon/deploy-estate-application.sh`, который будет автоматизировать развертывание `Laravel-Real-Estate-Venue-Portal`.
+
+Репо приложения `https://github.com/rotoro-cloud/Laravel-Real-Estate-Venue-Portal`, команды для развертывания `https://github.com/rotoro-cloud/shell-scripts`
+
+Обрати внимание, что команды, относящиеся к `firewalld` не используются в этом задании.

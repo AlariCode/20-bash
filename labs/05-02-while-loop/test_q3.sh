@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 cat /home/moon/mcq3.txt | grep 'Print numbers from 0 to a given number'
 

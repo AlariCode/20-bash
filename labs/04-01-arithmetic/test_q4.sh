@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 bash /home/moon/price-calculator.sh 4 5 1 7 | grep "TOTAL:" | grep 27
 

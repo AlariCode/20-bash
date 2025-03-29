@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 cat /home/moon/mcq1.txt | grep 'prepare-directory-structure'
 

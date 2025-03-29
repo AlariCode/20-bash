@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 echo "Внимание, тестирование с циклами может занимать до минуты"
 
 [ -f /home/moon/multi-deploy.sh ]

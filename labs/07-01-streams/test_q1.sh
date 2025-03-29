@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 bash -c "[[ -x \"/home/moon/err-redirect.sh\" ]]"
 

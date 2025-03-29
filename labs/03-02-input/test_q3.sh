@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 cat /home/moon/mcq3.txt | grep 'Vendor of Camry is Toyota'
 

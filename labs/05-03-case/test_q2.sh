@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 [ -f /home/moon/linux-pkg-info.sh ]
 

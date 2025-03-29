@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 rm -rf /home/moon/scripts; mkdir /home/moon/scripts; cd /home/moon/scripts; touch pling.sh plang.sh plong.sh; chown -R moon:moon /home/moon/*; HOME=/home/moon /home/moon/add-exec-to-directory.sh scripts;
 

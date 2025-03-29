@@ -10,6 +10,8 @@ RUN cat /usr/bin/deploy.vt- | base64 -d > /usr/bin/deploy.vt \
 
 COPY labs /labs
 
-RUN chmod +x /labs/**/*.sh
+RUN chmod +x /labs/**/*.sh \
+    && echo 'moon:selena' | chpasswd \
+    && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
-USER moon
+#USER moon

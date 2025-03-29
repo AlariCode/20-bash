@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 bash /home/moon/print-color.sh blue | grep "Valid options are red and green"
 

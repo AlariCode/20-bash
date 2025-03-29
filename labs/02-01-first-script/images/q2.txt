@@ -1,0 +1,3 @@
+Задание 2 (/labs/02-01-first-script/test_q2.sh)
+
+1. Скрипт `/home/moon/system_status.sh` не исполняется. Почини его.

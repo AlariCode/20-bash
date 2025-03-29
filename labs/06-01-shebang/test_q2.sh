@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 cat /home/moon/mcq2.txt | grep 'Prints numbers from 12 to 21'
 

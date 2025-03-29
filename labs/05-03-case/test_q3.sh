@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 cat /home/moon/print-month-name.sh | awk -v RS='^$' 'END{exit !(index($0,"case") && index($0,"esac"))} '
 

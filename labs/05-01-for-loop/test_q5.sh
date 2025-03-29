@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 cat /home/moon/count-requests.sh | awk -v RS='^$' 'END{exit !(index($0,"for") && index($0,"do") && index($0,"done"))} '
 

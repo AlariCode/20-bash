@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 rm -f /tmp/output_curl
 

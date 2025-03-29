@@ -1,0 +1,3 @@
+Задание 7 (/labs/03-02-input/test_q7.sh)
+
+1. Поправь скрипт, чтобы `/home/moon/change_shell.sh` он работал без проблем.

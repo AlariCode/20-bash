@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 bash /home/moon/calculation.sh 15 5 | grep Sum | grep 20
 

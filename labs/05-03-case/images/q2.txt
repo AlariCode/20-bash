@@ -1,0 +1,9 @@
+Задание 2 (/labs/05-03-case/test_q2.sh)
+
+1. Например, корректным ответом на выполнение `linux-pkg-info.sh Alpine` будет ответ `It is 'apk' command.`
+
+Скрипт реализует следующую логику:
+`Fedora`, `RHEL`, `CentOS` используют `yum`
+`Debian`, `Ubuntu` используют `apt`
+`Alpine` использует `apk`
+`Arch` использует `pacman`

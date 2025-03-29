@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 bash /home/moon/limits.sh 2>&1 | grep "No such" && bash /home/moon/limits.sh
 

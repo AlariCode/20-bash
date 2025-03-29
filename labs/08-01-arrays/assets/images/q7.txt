@@ -1,0 +1,7 @@
+Задание 7 (/labs/08-01-arrays/test_q7.sh)
+
+1. Обнови скрипт `/home/moon/multi-deploy.sh`, чтобы цикл работал с массивом `$tasks`, который состоит из `3-го и 4-го` элементов массива переданных аргументов командной строки.
+
+Например: 
+
+команда `./multi-deploy.sh db-subsystem backend frontend load-balancer monitoring` должна создавать сборки только для `frontend` и `load-balancer`

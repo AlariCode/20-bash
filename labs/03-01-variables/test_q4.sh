@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 rm /home/moon/prepare-and-deploy_bu; bash /home/moon/backup-file.sh && ls prepare-and-deploy_bu
 

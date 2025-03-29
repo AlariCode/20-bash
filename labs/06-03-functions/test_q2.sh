@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 rm -rf /tmp/apps; cd /tmp; 
 bash /home/moon/create-directories.sh; 

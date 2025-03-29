@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 cat /home/moon/calculator.sh | grep percentage | grep "()"
 

@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 usermod -s /bin/bash moon
 

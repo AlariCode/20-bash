@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 cat books-dev.csv | grep '.jpg' | wc -l | grep 0
 

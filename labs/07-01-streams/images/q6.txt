@@ -1,0 +1,11 @@
+Задание 6 (/labs/07-01-streams/test_q6.sh)
+
+1. У нас есть три строки в файле `strings.txt`:
+
+Shell Scripts
+Multiline
+Heredocs question1
+
+2. В размещении `/home/moon/ss.sh` создай скрипт, который будет создавать из этих строк файл `/home/moon/heredoc.txt`
+
+Файл должен использовать heredoc с сохранением строк, как в образце. Разделитель должен быть `DELIMITER`

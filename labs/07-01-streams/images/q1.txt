@@ -1,0 +1,7 @@
+Задание 1 (/labs/07-01-streams/test_q1.sh)
+
+1. Создай исполняемый скрипт с названием `err-redirect.sh` в каталоге `/home/moon/`. Добавь в этот скрипт следующий код:
+
+echo "This is a standard output"
+echo "This is an error message" >&2
+exit

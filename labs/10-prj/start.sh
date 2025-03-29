@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 sudo clean-working-dir
 
 sudo cp -R /labs/10-prj/assets/destroy.sh /tmp/destroy.sh; sudo chmod +x /tmp/destroy.sh; sudo chown moon:moon /tmp/destroy.sh

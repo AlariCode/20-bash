@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 rm -rf /tmp/errors_warnings.txt
 

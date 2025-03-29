@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /home/moon/
 
 rm /home/moon/stderr.txt /home/moon/stdout.txt
 
